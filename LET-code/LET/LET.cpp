@@ -1,7 +1,12 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 #include <Windows.h>
+#include <stdlib.h>
+
 using namespace std;
+
+int points = 0;
 
 //Draws the abbreviation of the application
 void displayLogo()
@@ -84,6 +89,73 @@ void displayTheDeadBoyLegs(string mutualChoice)
 	printf("\n\t\t\t\t\t\t\t\t       /     \\");
 	printf("\n\t\t\t\t\t\t\t\t      /       \\");
 	printf("\n\t\t\t\t\t\t\t\t     /         \\");
+}
+
+void playGuessTheWord()
+{
+	string wordList[50] = { "resource","pleasant","champion","necklace","offender","overlook","creation","cemetery","marriage",
+	"solution","skeleton","stunning","contrast","register","function","midnight","resident","movement","overview","positive",
+	"ceremony","sunshine","building","dressing","mushroom","position","minimize","detector","cupboard" };
+	int counter = 0;
+	unsigned int index = rand() % 29;
+	string theWord = wordList[index], choice;
+
+	do
+	{
+		srand(time(0));
+		unsigned int index = rand() % 29;
+		string theWord = wordList[index];
+		string choice, resume;
+
+		for (size_t i = 0; i < theWord.length(); ++i)
+		{
+			if (theWord[i] == 'a' || theWord[i] == 'e' || theWord[i] == 'i' ||
+				theWord[i] == 'o' || theWord[i] == 'u')
+			{
+				theWord[i] = '_';
+			}
+		}
+		if (counter < 1)
+		{
+			system("cls");
+			printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!\n\n\n\n\n\n\n\n");
+			displayTheTable(theWord);
+		}
+		if (counter == 1)
+		{
+			system("cls");
+			displayTheDeadBoyHead();
+			displayTheTable(theWord);
+		}
+		else if (counter == 2)
+		{
+
+			system("cls");
+			displayTheDeadBoyBody(theWord);
+			printf("\n\n\n\n\t\tEnter The Word: ");
+		}
+		else if (counter == 3)
+		{
+			displayTheDeadBoyLegs(theWord);
+			printf("\n\n\n\n\t\t\t\t\t-------------------------------");
+			printf("\n\t\t\t\t\tPress Enter to finish the game! ");
+			printf("\n\t\t\t\t\t-------------------------------\n\t\t\t\t\t\t\t");
+			getline(cin, resume);
+			break;
+		}
+
+		getline(cin, choice);
+
+		if (choice != wordList[index])
+		{
+			counter++;
+		}
+		else
+		{
+			points++;
+		}
+
+	} while (choice != theWord);
 }
 
 void displayTheResultOfGuessTheWord(string mutualChoice)
