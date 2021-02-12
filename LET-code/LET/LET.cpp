@@ -544,6 +544,109 @@ void practisePresentContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+void displayTheUsageOfPastSimpleTense(string mutualChoice)
+{
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t\t    The Usage Of Past Simple Tense.");
+	printf("\n\n\n 1. We use it with finished actions, states or habits in the past when we have a finished time word.");
+	printf("\n\n\t- I went to the cinema yesterday.\n");
+	printf("\n\t- We spent a lot of time in Japan in 2007.");
+	printf("\n\n\n 2. We use it with finished actions, states or habits in the past when we know that the time period has finished.");
+	printf("\n\n\t- Leonardo painted the Mona Lisa.\n");
+	printf("\n\t- The Vikings invaded Britain.");
+	printf("\n\n\n 3. For stories or lists of events, we often use the past simple for the actions in the story.");
+	printf("\n\n\n\t- He went to a cafe. People were chatting and music was playing. He sat down and ordered a coffee.");
+	printf("\n\n\n\n\t\t\t\t\t\t\t\tPress Enter To Continue: ");
+
+	getline(cin, mutualChoice);
+}
+
+void practisePastSimpleTenseEx1(string mutualChoice)
+{
+	string sentence[10] = { "1. Tom ___ (look) out of the window before 5 minutes.","2. We ___ (arrive) at 6.30 yesterday.",
+	"3. Laura ___ (watched) television all afternoon today.","4. The bus ___ (stop) at the end of the street a minute ago.",
+	"5. I ___ (visit) an old castle last Saturday.","6. Sue ___ (wait) for her friends for more than an hour.",
+	"7. They ___ (decide) to come to my party yesterday.","8. He ___ (do) his test, before everyone.",
+	"9. Ivan and George ___ (play) football two hours ago.","10. Susan ___ (study) more than us last year." };
+
+	string answers[10] = { "looked" , "arrived" , "watched" , "stopped" , "visited" , "waited" , "decided" , "did" , "played" , "studied" };
+
+	string condition[1] = { "Enter The Word: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.1 Enter The Word To Complete The Sentence Correctly.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePastSimpleTenseEx2(string mutualChoice)
+{
+	string sentence[10] = { "1. Did she ___ her room?","2. We ___ good friends before.",
+	"3. They ___ in Spain two years ago.","4. An old man ___ down in front of my eyes yesterday.",
+	"5. Marry ___ to turn of the light.","6. Did they ___ the match?",
+	"7. I ___ to school yesterday.","8. A gardener _____ dead leaves.",
+	"9. Amelia ___ to stay with her father.","10. George ___ home very late last night." };
+
+	string chooseAnswer[10]{ "\n\n\ta) clean  b) cleaned" , "\n\n\ta) were  b) are" , "\n\n\ta) life  b) lived" , "\n\n\ta) sat  b) sitted"
+	, "\n\n\ta) forget  b) forgot" , "\n\n\ta) lost  b) lose" , "\n\n\ta) went  b) goed" , "\n\n\ta) sweeped up  b) swept up" , "\n\n\ta) chose  b) choosed"
+	, "\n\n\ta) comed b) came" };
+
+	string answers[10] = { "a" , "a" , "b" , "a" , "b" , "b" , "a" , "b" , "a" , "b" };
+
+	string condition[1] = { "Enter The Correct Answer (Enter The Letter Only!): " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.2 Choose The Correct Answer.");
+
+	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
+}
+
+void practisePastSimpleTenseEx3(string mutualChoice)
+{
+	string sentence[10] = { "1. I watch TV last week.","2. We eated meat with my best friend yesterday.",
+	"3. The bus stoped a few minutes ago.","4. I meeted my wife 9 years ago.",
+	"5. She leaved the school in 2010.","6. He buyed a new house last month.",
+	"7. I readed an interesting book yesterday.","8. We do a lot of job before 3 days.",
+	"9. She finish her work at six o'clock yesterday.","10. I goed to bed early two days ago." };
+
+	string answers[10] = { "watched" , "ate" , "stopped" , "met" , "left" , "bought" , "read" , "did" , "finished" , "went" };
+
+	string condition[1] = { "Enter The Correct Form Of The Mistake: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.3 Correct The Mistakes (Only The Incorrect Word).");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePastSimpleTenseEx4(string mutualChoice)
+{
+	string sentence[10] = { "1. Tim arrived at 2.00.","2. Sam phoned home." , "3. Helen wanted to make a phone call.","4. Paul visited the doctor.",
+	"5. Bill missed the bus.","6. George walked to school." , "7. Jim opened the window.","8. Emma helped the teacher.",
+	"9. Alice washed her hair.","10. Nikol went to bed." };
+
+	string answers[10] = { "Did Tim arrive at 2.00?" , "Did Sam phone home?" , "Did Helen want to make a phone call?" , "Did Paul visit the doctor?"
+	, "Did Bill miss the bus?" , "Did George walk to school?" , "Did Jim open the window?" , "Did Emma help the teacher?"
+	, "Did Alice wash her hair?" , "Did Nikol go to bed?" };
+
+	string condition[1] = { "Enter The Question Form Of The Sentence: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
 int main()
 {
 	displayStartPage();
