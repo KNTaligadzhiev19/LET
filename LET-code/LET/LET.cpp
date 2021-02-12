@@ -11,21 +11,27 @@ int points = 0;
 //Draws the abbreviation of the application
 void displayLogo()
 {
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
-	printf("\n\n\n\n\n\t\t\t\t|\t\t\t|-------------\t\t-------------");
-	printf("\n\t\t\t\t|\t\t\t|\t\t\t      |");
-	printf("\n\t\t\t\t|\t\t\t|\t\t\t      |");
-	printf("\n\t\t\t\t|\t\t\t|-------------\t\t      |");
-	printf("\n\t\t\t\t|\t\t\t|\t\t\t      |");
-	printf("\n\t\t\t\t|\t\t\t|\t\t\t      |");
-	printf("\n\t\t\t\t|___________\t        |-------------\t\t      |");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!\n\n\n");
+	printf("\t\t\t\t      _                 _______           _________\n");
+	printf("\t\t\t\t     ( \\               (  ____ \\         \\ __   __ /\n");
+	printf("\t\t\t\t     | |               | (    \\/             ) (\n");
+	printf("\t\t\t\t     | |               | (__                 | |\n");
+	printf("\t\t\t\t     | |               |  __)                | |\n");
+	printf("\t\t\t\t     | |               | (                   | |\n");
+	printf("\t\t\t\t     | |____/\\         | (____/\\             | |\n");
+	printf("\t\t\t\t     (_______/         (_______/             )_(\n");
 }
 
 //Displays the modes of the application
 void displayStartPage()
 {
+	string gameModeOne = "Enter 1 To Practise English Tenses";
+	string gameModeTwo = "Enter 2 To Play Guess The Word";
+	string gameModeThree = "Enter 3 To Practise Irregular Verbs ";
+	string enterChoice = "Enter Your Choice: ";
+
 	displayLogo();
-	printf("\n\n\n");
+	printf("\n\n");
 
 	//Draws the line under the abbreviation
 	for (int i = 0; i < 120; i++)
@@ -35,10 +41,41 @@ void displayStartPage()
 		Sleep(15);
 	}
 
-	//Displays the three modes of the application
-	printf("\n\n\n\t\t    Enter 1 To Practise English Tenses\t\t     Enter 2 To Play Guess The Word");
-	printf("\n\n\n\n\t\t\t\t\t      Enter 3 To Practise Irregular Verbs ");
-	printf("\n\n\n\n\t\t\t\t\t\t      Enter Your Choice: ");
+	cout << "\n\n\n\t\t    ";
+
+	for (int i = 0; i < gameModeOne.size(); i++)
+	{
+		cout << gameModeOne[i];
+
+		Sleep(40);
+	}
+
+	cout << "\t\t     ";
+
+	for (int i = 0; i < gameModeTwo.size(); i++)
+	{
+		cout << gameModeTwo[i];
+
+		Sleep(40);
+	}
+
+	cout << "\n\n\n\n\t\t\t\t\t      ";
+
+	for (int i = 0; i < gameModeThree.size(); i++)
+	{
+		cout << gameModeThree[i];
+
+		Sleep(40);
+	}
+
+	cout << "\n\n\n\t\t\t\t\t\t     ";
+
+	for (int i = 0; i < enterChoice.size(); i++)
+	{
+		cout << enterChoice[i];
+
+		Sleep(40);
+	}
 }
 
 //Displays the table with a random word, that user has to guess
@@ -56,7 +93,7 @@ void displayTheTable(string mutualChoice)
 //Displays the head of the boy, when the user makes the first wrong prediction
 void displayTheDeadBoyHead()
 {
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\t\t\t\t\t\t\t\t\t  _");
 	printf("\n\t\t\t\t\t\t\t\t\t / \\");
 	printf("\n\t\t\t\t\t\t\t\t\t/   \\");
@@ -173,7 +210,7 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 {
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\t\t\t\t  _________________________________________________________");
 
 	for (int i = 0; i < 2; i++) 
@@ -217,7 +254,7 @@ void displayMenu()
 {
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\n\t\t\t\t  _________________________________________________________");
 	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
 	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
@@ -282,7 +319,7 @@ void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 {
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\t\t\t\t\t    The Usage Of Present Simple Tense.");
 	printf("\n\n\n 1. We use the present simple when something is generally or always true.");
 	printf("\n\n\t- People need food.");
@@ -315,7 +352,7 @@ void practisePresentSimpleTenseEx1(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.1 Enter The Word To Complete The Sentence Correctly.");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
@@ -341,7 +378,7 @@ void practisePresentSimpleTenseEx2(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.2 Choose The Correct Answer.");
 
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
@@ -361,7 +398,7 @@ void practisePresentSimpleTenseEx3(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.3 Correct The Mistakes (Only The Incorrect Word).");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
@@ -383,7 +420,7 @@ void practisePresentSimpleTenseEx4(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
@@ -394,7 +431,7 @@ void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 {
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\t\t\t\t\t    The Usage Of Present Continuous Tense.");
 	printf("\n\n\n 1. First, we use the present continuous for things that are happening at the moment of speaking.");
 	printf("\n\n\t- I'm working at the moment.");
@@ -427,7 +464,7 @@ void practisePresentContinuousTenseEx1(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.1 Enter The Word To Complete The Sentence Correctly.");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
@@ -454,7 +491,7 @@ void practisePresentContinuousTenseEx2(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.2 Choose The Correct Answer.");
 
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
@@ -475,7 +512,7 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.3 Correct The Mistakes (Only The Incorrect Word).");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
@@ -497,7 +534,7 @@ void practisePresentContinuousTenseEx4(string mutualChoice)
 
 	system("cls");
 
-	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
 
 	answerCheckEx(sentence, condition, mutualChoice, answers);
