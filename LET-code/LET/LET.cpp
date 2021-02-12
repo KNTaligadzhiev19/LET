@@ -22,6 +22,16 @@ void displayLogo()
 	printf("\t\t\t\t     (_______/         (_______/             )_(\n");
 }
 
+void displayLetterByLetter(string gameMode)
+{
+	for (int i = 0; i < gameMode.size(); i++)
+	{
+		cout << gameMode[i];
+		//Slows down with 40 milliseconds
+		Sleep(40);
+	}
+}
+
 //Displays the modes of the application
 void displayStartPage()
 {
@@ -37,45 +47,25 @@ void displayStartPage()
 	for (int i = 0; i < 120; i++)
 	{
 		cout << "_";
-		//Slows down the drawing of the line
+		//Slows down with 15 milliseconds the drawing of the line
 		Sleep(15);
 	}
 
 	cout << "\n\n\n\t\t    ";
 
-	for (int i = 0; i < gameModeOne.size(); i++)
-	{
-		cout << gameModeOne[i];
-
-		Sleep(40);
-	}
+	displayLetterByLetter(gameModeOne);
 
 	cout << "\t\t     ";
 
-	for (int i = 0; i < gameModeTwo.size(); i++)
-	{
-		cout << gameModeTwo[i];
-
-		Sleep(40);
-	}
+	displayLetterByLetter(gameModeTwo);
 
 	cout << "\n\n\n\n\t\t\t\t\t      ";
 
-	for (int i = 0; i < gameModeThree.size(); i++)
-	{
-		cout << gameModeThree[i];
-
-		Sleep(40);
-	}
+	displayLetterByLetter(gameModeThree);
 
 	cout << "\n\n\n\t\t\t\t\t\t     ";
 
-	for (int i = 0; i < enterChoice.size(); i++)
-	{
-		cout << enterChoice[i];
-
-		Sleep(40);
-	}
+	displayLetterByLetter(enterChoice);
 }
 
 //Displays the table with a random word, that user has to guess
@@ -97,9 +87,8 @@ void displayTheDeadBoyHead()
 	printf("\n\n\t\t\t\t\t\t\t\t\t  _");
 	printf("\n\t\t\t\t\t\t\t\t\t / \\");
 	printf("\n\t\t\t\t\t\t\t\t\t/   \\");
-	printf("\n\t\t\t\t\t\t\t\t       |     |");
 
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		printf("\n\t\t\t\t\t\t\t\t       |     |");
 	}
@@ -140,9 +129,10 @@ void displayTheDeadBoyLegs(string mutualChoice)
 void playGuessTheWord()
 {
 	//Declare the variables
-	string wordList[50] = { "resource","pleasant","champion","necklace","offender","overlook","creation","cemetery","marriage",
-	"solution","skeleton","stunning","contrast","register","function","midnight","resident","movement","overview","positive",
-	"ceremony","sunshine","building","dressing","mushroom","position","minimize","detector","cupboard" };
+	string wordList[50] = { "resource","pleasant","champion","necklace","offender","overlook",
+	"creation","cemetery","marriage","solution","skeleton","stunning","contrast","register",
+	"function","midnight","resident","movement","overview","positive","ceremony","sunshine",
+	"building","dressing","mushroom","position","minimize","detector","cupboard" };
 	int counter = 0;
 	unsigned int index = rand() % 29;
 	string theWord = wordList[index], choice;
@@ -163,6 +153,8 @@ void playGuessTheWord()
 				theWord[i] = '_';
 			}
 		}
+
+		//swich case
 		if (counter < 1)
 		{
 			system("cls");
@@ -297,7 +289,8 @@ void answerCheckEx(string sentence[10], string condition[1], string mutualChoice
 }
 
 //Checks the user's answers 
-void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice, string answers[10], string chooseAnswer[10])
+void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice, 
+string answers[10], string chooseAnswer[10])
 {
 	for (int i = 0; i < 10; i++)
 	{
@@ -341,10 +334,11 @@ void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 //Practise Present Simple Tense
 void practisePresentSimpleTenseEx1(string mutualChoice)
 {
-	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.","3. Nick (send) ___ an email every day.",
-		"4. I (decide) ___ to learn Japanese.","5. Sam and Dave (cat) ___ all the sandwiches every time.", "6. Carlos' family (buy) ___ a dog every year.",
-		"7. Maria and Helen (start) ___ at new school.","8. Frances (break) ___ her cup every time when he eats.","9. I (lose) ___ my umbrella after every rain.",
-		"10. Max (take) ___ the dog for a walk every morning." };
+	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.",
+	"3. Nick (send) ___ an email every day.","4. I (decide) ___ to learn Japanese.",
+	"5. Sam and Dave (cat) ___ all the sandwiches every time.", "6. Carlos' family (buy) ___ a dog every year.",
+	"7. Maria and Helen (start) ___ at new school.","8. Frances (break) ___ her cup every time when he eats.",
+	"9. I (lose) ___ my umbrella after every rain.","10. Max (take) ___ the dog for a walk every morning." };
 
 	string answers[10] = { "does" , "find" , "sends" , "decide" , "cat" , "buy" , "start" , "breaks" , "loses" , "takes" };
 
@@ -368,9 +362,9 @@ void practisePresentSimpleTenseEx2(string mutualChoice)
 	"8. A: I ___ reading detective stories.\n  B: I like it too!","9. A: Do we ___ each other?\n  B: No, we don't.",
 	"10. A: Do you have a pool in your yard?\n  B: No, I __." };
 
-	string chooseAnswer[10]{ "\n\n\ta) am  b) is" , "\n\n\ta) do  b) does" , "\n\n\ta) is  b) am" , "\n\n\ta) study  b) studies"
-	, "\n\n\ta) Do  b) Does" , "\n\n\ta) go  b) goes" , "\n\n\ta) Are  b) Is" , "\n\n\ta) likes  b) like" , "\n\n\ta) know  b) knows"
-	, "\n\n\ta) doesn't b) don't" };
+	string chooseAnswer[10]{ "\n\n\ta) am  b) is","\n\n\ta) do  b) does","\n\n\ta) is  b) am",
+	"\n\n\ta) study  b) studies","\n\n\ta) Do  b) Does","\n\n\ta) go  b) goes","\n\n\ta) Are  b) Is",
+	"\n\n\ta) likes  b) like","\n\n\ta) know  b) knows","\n\n\ta) doesn't b) don't" };
 
 	string answers[10] = { "a" , "a" , "b" , "a" , "b" , "b" , "a" , "b" , "a" , "b" };
 
@@ -387,10 +381,10 @@ void practisePresentSimpleTenseEx2(string mutualChoice)
 //Practise Present Simple Tense
 void practisePresentSimpleTenseEx3(string mutualChoice)
 {
-	string sentence[10] = { "1. He love playing basketball.","2. They sleeps in afternoon.","3. He get up early everyday.",
-	"4. We cooks every day.","5. We goes to the gym together.","6. You has a big house.",
-	"7. She go to work by car.","8. The sun rise at the east.","9. I likes programming and biology.",
-	"10. I don't plays video games." };
+	string sentence[10] = { "1. He love playing basketball.","2. They sleeps in afternoon.",
+	"3. He get up early everyday.","4. We cooks every day.","5. We goes to the gym together.",
+	"6. You has a big house.","7. She go to work by car.","8. The sun rise at the east.",
+	"9. I likes programming and biology.","10. I don't plays video games." };
 
 	string answers[10] = { "loves" , "sleep" , "gets" , "cook" , "go" , "have" , "goes" , "rises" , "like" , "play" };
 
@@ -407,14 +401,17 @@ void practisePresentSimpleTenseEx3(string mutualChoice)
 //Practise Present Simple Tense
 void practisePresentSimpleTenseEx4(string mutualChoice)
 {
-	string sentence[10] = { "1. He loves to play basketball.", "2. He goes to school.","3. She writes an e-mail to her best friend.",
-		"4. He thinks he is very handsome.","5. It usually rains every day here.", "6. It smells very delicious in the kitchen.",
-		"7. We go to a gallery every Sunday.","8. The sun rises at the east.","9. She goes to work by car.",
-		"10. You have a big house." };
+	string sentence[10] = { "1. He loves to play basketball.", "2. He goes to school.",
+	"3. She writes an e-mail to her best friend.","4. He thinks he is very handsome.",
+	"5. It usually rains every day here.", "6. It smells very delicious in the kitchen.",
+	"7. We go to a gallery every Sunday.","8. The sun rises at the east.",
+	"9. She goes to work by car.","10. You have a big house." };
 
-	string answers[10] = { "Does he love to play basketball?" , "Does he go to school?" , "Does she write an e-mail to her best friend?"
-	, "Does he think he is very handsome?" , "Does it usually rain every day here?" , "Does it smell very delicious in the kitchen?"
-	, "Do we go to a gallery every Sunday?" , "Does the sun rise at the east?" , "Does she go to work by car?" , "Do you have a big house?" };
+	string answers[10] = { "Does he love to play basketball?","Does he go to school?",
+	"Does she write an e-mail to her best friend?","Does he think he is very handsome?",
+	"Does it usually rain every day here?" , "Does it smell very delicious in the kitchen?",
+	"Do we go to a gallery every Sunday?","Does the sun rise at the east?",
+	"Does she go to work by car?","Do you have a big house?" };
 
 	string condition[1] = { "Enter The Question Form Of The Sentence: " };
 
@@ -453,12 +450,15 @@ void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx1(string mutualChoice)
 {
-	string sentence[10] = { "1. The boys are ___ (play) football after school.", "2. They are ___ (learn) Spanish now.","3. Why aren't you ___ (do) your homework?",
-		"4. Suzan is ___ (iron) her clothes right now.","5. Mary is at university. She's ___ (study) chemistry.", "6. She is ___ (work) right now.",
-		"7. They aren't ___ (study) English these days.","8. She is constanly ___ (change) her hair color.","9. Children are ___ (study) their lessons.",
-		"10. The man is ___ (talk) on the phone." };
+	string sentence[10] = { 
+	"1. The boys are ___ (play) football after school.","2. They are ___ (learn) Spanish now.",
+	"3. Why aren't you ___ (do) your homework?","4. Suzan is ___ (iron) her clothes right now.",
+	"5. Mary is at university. She's ___ (study) chemistry.", "6. She is ___ (work) right now.",
+	"7. They aren't ___ (study) English these days.","8. She is constanly ___ (change) her hair color.",
+	"9. Children are ___ (study) their lessons.","10. The man is ___ (talk) on the phone." };
 
-	string answers[10] = { "playing" , "learning" , "doing" , "ironing" , "studying" , "working" , "studying" , "changing" , "studying" , "talking" };
+	string answers[10] = { "playing","learning","doing","ironing","studying","working","studying",
+	"changing","studying","talking" };
 
 	string condition[1] = { "Enter The Word: " };
 
@@ -473,19 +473,20 @@ void practisePresentContinuousTenseEx1(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx2(string mutualChoice)
 {
-	string sentence[10] = { "1. A: Where are you going?\n  B: I ___ going to school.",
-	"2. A: What are you doing?\n  B: I am ___ the guitar.","3. A: What are they doing?\n  B: ___ are playing football.",
-	"4. A: ___ we starting?\n  B: Yes, we are.","5. A: Why are you ___?\n  B: Because, I fell terrible.",
-	"6. A: Why ___ they skiing?\n  B: I have no idea.","7. A: Are you studying?\n  B: Yes, I ___.",
+	string sentence[10] = { 
+	"1. A: Where are you going?\n  B: I ___ going to school.","2. A: What are you doing?\n  B: I am ___ the guitar.",
+	"3. A: What are they doing?\n  B: ___ are playing football.","4. A: ___ we starting?\n  B: Yes, we are.",
+	"5. A: Why are you ___?\n  B: Because, I fell terrible.","6. A: Why ___ they skiing?\n  B: I have no idea.",
+	"7. A: Are you studying?\n  B: Yes, I ___.",
 	"8. A: I love reading detective stories.\n  B: Realy? At this moment I ___ reading detective story.",
-	"9. A: Is the girl studying ___?\n  B: Yes, she is.",
-	"10. A: Are you having a bath right now?\n  B: No, I __." };
+	"9. A: Is the girl studying ___?\n  B: Yes, she is.","10. A: Are you having a bath right now?\n  B: No, I __." };
 
 	string answers[10] = { "a" , "a" , "b" , "a" , "a" , "b" , "a" , "b" , "a" , "b" };
 
-	string chooseAnswer[10]{ "\n\n\ta) am  b) is" , "\n\n\ta) playing  b) play" , "\n\n\ta) We  b) They" , "\n\n\ta) Are  b) Do"
-	, "\n\n\ta) crying  b) cry" , "\n\n\ta) we  b) are" , "\n\n\ta) do  b) does" , "\n\n\ta) do  b) am" , "\n\n\ta) now  b) general"
-	, "\n\n\ta) doesn't b) don't" };
+	string chooseAnswer[10]{ 
+	"\n\n\ta) am  b) is","\n\n\ta) playing  b) play","\n\n\ta) We  b) They","\n\n\ta) Are  b) Do",
+	"\n\n\ta) crying  b) cry","\n\n\ta) we  b) are","\n\n\ta) do  b) does","\n\n\ta) do  b) am",
+	"\n\n\ta) now  b) general","\n\n\ta) doesn't b) don't" };
 
 	string condition[1] = { "Enter The Correct Answer (Enter The Letter Only!): " };
 
@@ -506,7 +507,7 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 	"7. They isn't studying English these days.","8. She is constantly changed her hair color.",
 	"9. Children is studying their lessons.","10. The man is talks on the phone now." };
 
-	string answers[10] = { "are" , "learning" , "doing" , "is" , "studying" , "working" , "aren't" , "changing" , "are" , "talking" };
+	string answers[10] = { "are","learning","doing","is","studying","working","aren't","changing","are","talking" };
 
 	string condition[1] = { "Enter The Correct Form Of The Mistake: " };
 
@@ -521,14 +522,17 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx4(string mutualChoice)
 {
-	string sentence[10] = { "1. They are playing football after school.", "2. They are learning Spanish now.","3. You are doing your homework now.",
-		"4. They are walking in the lawn.","5. Mary is making a cake right now.", "6. He is training at this moment.",
-		"7. It is raining.","8. He is running to the yard.","9. We are meeting in the room.",
-		"10. I am going to school." };
+	string sentence[10] = { 
+	"1. They are playing football after school.", "2. They are learning Spanish now.",
+	"3. You are doing your homework now.","4. They are walking in the lawn.",
+	"5. Mary is making a cake right now.", "6. He is training at this moment.",
+	"7. It is raining.","8. He is running to the yard.","9. We are meeting in the room.",
+	"10. I am going to school." };
 
-	string answers[10] = { "Are they playing football after school?" , "Are they learning Spanish now?" , "Are you doing your homework now?"
-	, "Are they walking in the lawn?" , "Is Mary making a cake right now?" , "Is he training at this moment?" , "Is it raining?" , "Is he running to the yard?"
-	, "Are we meeting in the room?" , "Am I going to school?" };
+	string answers[10] = { 
+	"Are they playing football after school?","Are they learning Spanish now?","Are you doing your homework now?",
+	"Are they walking in the lawn?","Is Mary making a cake right now?","Is he training at this moment?","Is it raining?",
+	"Is he running to the yard?","Are we meeting in the room?" , "Am I going to school?" };
 
 	string condition[1] = { "Enter The Question Form Of The Sentence: " };
 
