@@ -35,12 +35,13 @@ void displayStartPage()
 		Sleep(15);
 	}
 
-	//Displays the two modes of the application
+	//Displays the three modes of the application
 	printf("\n\n\n\t\t    Enter 1 To Practise English Tenses\t\t     Enter 2 To Play Guess The Word");
 	printf("\n\n\n\n\t\t\t\t\t      Enter 3 To Practise Irregular Verbs ");
 	printf("\n\n\n\n\t\t\t\t\t\t      Enter Your Choice: ");
 }
 
+//Displays the table with a random word, that user has to guess
 void displayTheTable(string mutualChoice)
 {
 	printf("\n\t\t______________________");
@@ -52,6 +53,7 @@ void displayTheTable(string mutualChoice)
 	printf("\n\n\n\n\t\tEnter The Word: ");
 }
 
+//Displays the head of the boy, when the user makes the first wrong prediction
 void displayTheDeadBoyHead()
 {
 	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
@@ -60,12 +62,16 @@ void displayTheDeadBoyHead()
 	printf("\n\t\t\t\t\t\t\t\t\t/   \\");
 	printf("\n\t\t\t\t\t\t\t\t       |     |");
 
-	for (int i = 0; i < 2; i++) printf("\n\t\t\t\t\t\t\t\t       |     |");
+	for (int i = 0; i < 2; i++)
+	{
+		printf("\n\t\t\t\t\t\t\t\t       |     |");
+	}
 
 	printf("\n\t\t\t\t\t\t\t\t        \\   /");
 	printf("\n\t\t\t\t\t\t\t\t         \\_/");
 }
 
+//Displays the body of the boy, when the user makes the second wrong prediction
 void displayTheDeadBoyBody(string mutualChoice)
 {
 	displayTheDeadBoyHead();
@@ -78,6 +84,7 @@ void displayTheDeadBoyBody(string mutualChoice)
 	printf("\n\t\t|____________________|\t\t\t\t     /    |    \\");
 }
 
+//Displays the legs of the boy, when the user makes the third wrong prediction
 void displayTheDeadBoyLegs(string mutualChoice)
 {
 	system("cls");
@@ -92,8 +99,10 @@ void displayTheDeadBoyLegs(string mutualChoice)
 	printf("\n\t\t\t\t\t\t\t\t     /         \\");
 }
 
+//Starts the "Guess The Word" game
 void playGuessTheWord()
 {
+	//Declare the variables
 	string wordList[50] = { "resource","pleasant","champion","necklace","offender","overlook","creation","cemetery","marriage",
 	"solution","skeleton","stunning","contrast","register","function","midnight","resident","movement","overview","positive",
 	"ceremony","sunshine","building","dressing","mushroom","position","minimize","detector","cupboard" };
@@ -103,6 +112,7 @@ void playGuessTheWord()
 
 	do
 	{
+		//Gives the random function a new seed
 		srand(time(0));
 		unsigned int index = rand() % 29;
 		string theWord = wordList[index];
@@ -130,7 +140,6 @@ void playGuessTheWord()
 		}
 		else if (counter == 2)
 		{
-
 			system("cls");
 			displayTheDeadBoyBody(theWord);
 			printf("\n\n\n\n\t\tEnter The Word: ");
@@ -159,6 +168,7 @@ void playGuessTheWord()
 	} while (choice != theWord);
 }
 
+//Displays a table with the score
 void displayTheResultOfGuessTheWord(string mutualChoice)
 {
 	system("cls");
@@ -166,21 +176,33 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
 	printf("\n\n\t\t\t\t  _________________________________________________________");
 
-	for (int i = 0; i < 2; i++) printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	for (int i = 0; i < 2; i++) 
+	{
+		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	}
 
 	printf("\n\t\t\t\t |\t\t      Thanks For Playing!\t\t   |");
 	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
 	printf("\n\t\t\t\t |_________________________________________________________|");
 
-	for (int i = 0; i < 2; i++) printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	for (int i = 0; i < 2; i++)
+	{
+		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	}
 
 	printf("\n\t\t\t\t |\t  \t Congratulations Your Score Is:  \t   |");
 
-	for (int i = 0; i < 4; i++) printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	for (int i = 0; i < 4; i++) 
+	{
+		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	}
 
 	cout << "\n\t\t\t\t |\t  \t\t   " << points << " Points\t\t\t   |";
 
-	for (int i = 0; i < 4; i++) printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	for (int i = 0; i < 4; i++)
+	{
+		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	}
 
 	printf("\n\t\t\t\t |\t  \t Congratulations Your Score Is:  \t   |");
 	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
@@ -190,6 +212,7 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Displays the menu with the options
 void displayMenu()
 {
 	system("cls");
@@ -219,6 +242,7 @@ void displayMenu()
 	printf("\n\n\n\t\t\t\t\t\t\tYour Choice: ");
 }
 
+//Checks the user's answers 
 void answerCheckEx(string sentence[10], string condition[1], string mutualChoice, string answers[10])
 {
 	for (int i = 0; i < 10; i++)
@@ -235,6 +259,7 @@ void answerCheckEx(string sentence[10], string condition[1], string mutualChoice
 	}
 }
 
+//Checks the user's answers 
 void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice, string answers[10], string chooseAnswer[10])
 {
 	for (int i = 0; i < 10; i++)
@@ -252,6 +277,7 @@ void answerCheckExMultipleChoice(string sentence[10], string condition[1], strin
 	}
 }
 
+//Displays the usage of the Present Simple Tense
 void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -275,6 +301,7 @@ void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Present Simple Tense
 void practisePresentSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.","3. Nick (send) ___ an email every day.",
@@ -294,6 +321,7 @@ void practisePresentSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Simple Tense
 void practisePresentSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: Where are you from?\n  B: I __ from Bulgaria.",
@@ -319,6 +347,7 @@ void practisePresentSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Present Simple Tense
 void practisePresentSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. He love playing basketball.","2. They sleeps in afternoon.","3. He get up early everyday.",
@@ -338,6 +367,7 @@ void practisePresentSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Simple Tense
 void practisePresentSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. He loves to play basketball.", "2. He goes to school.","3. She writes an e-mail to her best friend.",
@@ -359,6 +389,7 @@ void practisePresentSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays the usage of Present Continuous Tense
 void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 {
 	system("cls");
@@ -382,6 +413,7 @@ void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Present Continuous Tense
 void practisePresentContinuousTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. The boys are ___ (play) football after school.", "2. They are ___ (learn) Spanish now.","3. Why aren't you ___ (do) your homework?",
@@ -401,6 +433,7 @@ void practisePresentContinuousTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Continuous Tense
 void practisePresentContinuousTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: Where are you going?\n  B: I ___ going to school.",
@@ -427,6 +460,7 @@ void practisePresentContinuousTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Present Continuous Tense
 void practisePresentContinuousTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. The boys is playing football now.","2. They are learn Spanish now.",
@@ -447,6 +481,7 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Continuous Tense
 void practisePresentContinuousTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. They are playing football after school.", "2. They are learning Spanish now.","3. You are doing your homework now.",
