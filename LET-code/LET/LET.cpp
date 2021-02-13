@@ -647,6 +647,115 @@ void practisePastSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+void displayTheUsageOfPastContinuousTense(string mutualChoice)
+{
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t\t    The Usage Of Past Continuous Tense.");
+	printf("\n\n\n 1. An action in the past which overlaps another action or a time. The action in the past continuous starts \n    before and often continues after the other shorter action or time.");
+	printf("\n\n\t- I was walking to the station when I met John.\n");
+	printf("\n\t- At three o'clock, I was working. ");
+	printf("\n\n\n 2. In the same way, we can use the past continuous for the background of a story.");
+	printf("\n\n\t- Leonardo painted the Mona Lisa.\n");
+	printf("\n\t- The Vikings invaded Britain.");
+	printf("\n\n\n 3. Temporary habits that happen more often than we expect in the past.");
+	printf("\n\n\t- He was always leaving the tap running.");
+	printf("\n\n\t- She was constantly singing.");
+	printf("\n\n\n\t\t\t\t\t\t\t\tPress Enter To Continue: ");
+
+	getline(cin, mutualChoice);
+}
+
+void practisePastContinuousTenseEx1(string mutualChoice)
+{
+	string sentence[10] = { "1. Anna ___ (read a book).", "2. Paula and Jim ___ (play football).","3. Tim ___ (write on the board).",
+		"4. Kate and Bill ___ (listen to music).","5. Sam ___ (look out of the window).", "6. Ed and Lisa ___ (draw pictures).",
+		"7. George ___ (do his homework).","8. Ivan ___ (play on his phone).","9. Paolo ___ (watch TV).", "10. Mario and Petar (wait for the class)." };
+
+	string answers[10] = { "Anna was reading a book." , "Paula and Jim were playing football." , "Tim was writing on the board."
+	, "Kate and Bill were listening to music." , "Sam was looking out of the window." , "Ed and Lisa were drawing pictures."
+	, "George was doing his homework." , "Ivan was playing on his phone." , "Paolo was watching TV." , "Mario and Petar were waiting for the class." };
+
+	string condition[1] = { "Enter The Sentence In Past Continuous Form: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.1 Enter The Sentences In The Correct Form.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePastContinuousTenseEx2(string mutualChoice)
+{
+	string sentence[10] = { "1. A: What ___ you doing 10 minutes ago?\n  B: I was studying.",
+	"2. A: What were you doing at 7 o'clock in the morning?\n  B: I was ___.",
+	"3. A: What were you ___ a few moments ago?\n  B: I was thinking about the math test tomorrow.",
+	"4. A: What was our teacher saying a few minutes ago?\n  B: She was ___ about the test.",
+	"5. A: What were ___ doing yesterday?\n  B: They were playing football.",
+	"6. A: Was it raining two hours ago?\n  B: No, it ___.",
+	"7. A: What we were doing yesterday at this time?\n  B: We ___ drinking alcohol.",
+	"8. A: Why was ___ crying?\n  B: Because she was sad.","9. A: Were you sleeping yesterday night?\n  B: Yes, we ___.",
+	"10. A: Were you cooking yesterday at this time?\n  B: No, I ___." };
+
+	string chooseAnswer[10]{ "\n\n\ta) was  b) were" , "\n\n\ta) eating  b) eat" , "\n\n\ta) thinkings  b) thinking" , "\n\n\ta) talking  b) saying"
+		, "\n\n\ta) you  b) they" , "\n\n\ta) weren't  b) wasn't" , "\n\n\ta) were  b) was" , "\n\n\ta) he  b) she" , "\n\n\ta) were  b) are"
+		, "\n\n\ta) wasn't b) weren't" };
+
+	string answers[10] = { "b" , "a" , "b" , "a" , "b" , "b" , "a" , "b" , "a" , "a" };
+
+	string condition[1] = { "Enter The Correct Answer (Enter The Letter Only!): " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.2 Choose The Correct Answer.");
+
+	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
+}
+
+void practisePastContinuousTenseEx3(string mutualChoice)
+{
+	string sentence[10] = { "1. They are drinking coffe when I arrived.","2. I was watch football match on TV when he called.",
+	"3. The earthquake was scared all of us.","4. We was eating when our friends showed up.",
+	"5. The police were chasing us while you were talking.","6. We were goin to cinema yesterday at this time.",
+	"7. John were reading an English book while Mary was watching TV.","8. What was you doing at this time yesterday?",
+	"9. You are studying chemistry all day yesterday.", "10. While I was studyings at University I met her." };
+
+	string answers[10] = { "were" , "watching" , "scaring" , "were" , "was" , "going" , "was" , "were" , "were" , "studying" };
+
+	string condition[1] = { "Enter The Correct Form Of The Mistake: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.3 Correct The Mistakes (Only The Incorrect Word).");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePastContinuousTenseEx4(string mutualChoice)
+{
+	string sentence[10] = { "1. Tim was drawing pictures.", "2. Kate and Bill were looking out of the window.","3. Ed and Lisa were reading a book.",
+		"4. Paula and Jim were writing on the board.","5. Anna was playing football.", "6. Sam was listening to music.",
+		"7. George was watching TV.","8. Ivan was waiting for the class.","9. Paolo was playing on his phone.",
+		"10. Mario and Petar were doing homework." };
+
+	string answers[10] = { "Was Tim drawing pictures?" , "Were Kate and Bill looking out of the window?" , "Were Ed and Lisa reading a book?"
+	, "Were Paula and Jim writing on the board?" , "Was Anna playing football?" , "Was Sam listening to music?" , "Was George watching TV?"
+	, "Was Ivan waiting for the class?" , "Was Paolo playing on his phone?" , "Were Mario and Petar doing homework?" };
+
+	string condition[1] = { "Enter The Question Form Of The Sentence: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
 int main()
 {
 	displayStartPage();
