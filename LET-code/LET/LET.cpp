@@ -756,6 +756,114 @@ void practisePastContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+void displayTheUsageOfPresentPerfectTense(string mutualChoice)
+{
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t\t    The Usage Of Present Perfect Tense.");
+	printf("\n\n\n 1. We use this tense when we want to talk about unfinished actions or states or habits that started in the past and \n    continue to the present. Usually we use it to say 'how long' and we need 'since' or 'for'");
+	printf("\n\n\t- I've known Karen since 1994.\n");
+	printf("\n\t- She's lived in London for three years.\n");
+	printf("\n\t- I've worked here for six months.");
+	printf("\n\n\n 2. We use 'since' with a fixed time in the past. The fixed time can be another action, which is in the past simple.");
+	printf("\n\n\t- I've known Sam since 1992.\n");
+	printf("\n\t- I've liked chocolate since I was a child.\n");
+	printf("\n\t- She's been here since 2pm.");
+	printf("\n\n\n 3. We use 'for' with a period of time (2 hours, three years, six months).");
+	printf("\n\n\t- I've known Julie for ten years.");
+	printf("\n\n\t- I've been hungry for hours.");
+	printf("\n\t\t\t\t\t\t\t\tPress Enter To Continue: ");
+
+	getline(cin, mutualChoice);
+}
+
+void practisePresentPerfectTenseEx1(string mutualChoice)
+{
+	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.","3. Nick (send) ___ an email.",
+		"4. I (decide) ___ to learn Japanese.","5. Sam and Dave (cat) ___ all the sandwiches.", "6. Carlos (buy) ___ a dog.",
+		"7. Maria and Helen (start) ___ at new school.","8. Frances (break) ___ her cup.","9. I (lose) ___ my umbrella.",
+		"10. Max (take) ___ the dog for a walk." };
+
+	string answers[10] = { "Harry has done the housework." , "Kate and Bill have found a new flat." , "Nick has sent an email."
+	, "I have decided to learn Japanese." , "Sam and Dave have catted all the sandwiches." , "Carlos has bought a dog."
+	, "Maria and Helen have started at new school." , "Frances has broken her cup." , "I have lost my umbrella." , "Max has taken the dog for a walk." };
+
+	string condition[1] = { "Enter The Sentence In Present Perfect Form: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.1 Enter The Sentences In The Correct Form.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePresentPerfectTenseEx2(string mutualChoice)
+{
+	string sentence[10] = { "1. My mother ___ been watched TV.","2. They have been ___ the Lord of the Kings.",
+		"3. She ___ learned to speak French.","4. Sansa and Cersei have ___ each other since 5 years old.",
+		"5. My sister has ___ the key in the bathroom.","6. The army ___ attacked that city two times.",
+		"7. You ___ listened to Madonna in the concert.","8. Scientists have ___ the atom.",
+		"9. I have ___ here since I left school.","10. ___ you just finished homework?" };
+
+	string chooseAnswer[10]{ "\n\n\ta) has  b) have" , "\n\n\ta) watched  b) watching" , "\n\n\ta) have  b) has" , "\n\n\ta) known  b) knew"
+		, "\n\n\ta) losen  b) lost" , "\n\n\ta) have  b) has" , "\n\n\ta) have  b) has" , "\n\n\ta) splitten  b) split" , "\n\n\ta) worked  b) work"
+		, "\n\n\ta) Has b) Have" };
+
+	string answers[10] = { "a" , "a" , "b" , "a" , "b" , "b" , "a" , "b" , "a" , "b" };
+
+	string condition[1] = { "Enter The Correct Answer (Enter The Letter Only!): " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.2 Choose The Correct Answer.");
+
+	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
+}
+
+void practisePresentPerfectTenseEx3(string mutualChoice)
+{
+	string sentence[10] = { "1. I has worked as an engineer for two years.","2. My brother has drived a car before.",
+		"3. I have maden you a cup of coffee.","4. The class have been outside for recess.",
+		"5. She has watching this movie several times.","6. My mother have just cleaned the house.",
+		"7. I have eated a lunch.","8. I has worked here since April.",
+		"9. She have already come.", "10. I have be to China 4 times." };
+
+	string answers[10] = { "have" , "driven" , "made" , "has" , "watched" , "has" , "eaten" , "have" , "has" , "been" };
+
+	string condition[1] = { "Enter The Correct Form Of The Mistake: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.3 Correct The Mistakes (Only The Incorrect Word).");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practisePresentPerfectTenseEx4(string mutualChoice)
+{
+	string sentence[10] = { "1. How long / you study English.", "2. How long / you have a cell phone.","3. How long / you have an e-mail address.",
+		"4. How long / you have be alive.","5. How long / you have be a student.", "6. How long / you have be marry.",
+		"7. How long / you have live in your house.","8. How long / you have live in this country.","9. How long / you have know me.",
+		"10. How long / you have be awake today." };
+
+	string answers[10] = { "How long have you studied English?" , "How long have you had a cell phone?" , "How long have you had an e-mail address?"
+	, "How long have you been alive?" , "How long have you been a student?" , "How long have you been married?" , "How long have you lived in your house?"
+	, "How long have you lived in this country?" , "How long have you known me?" , "How long have you been awake today?" };
+
+	string condition[1] = { "Enter The Question Form Of The Sentence: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
 int main()
 {
 	displayStartPage();
