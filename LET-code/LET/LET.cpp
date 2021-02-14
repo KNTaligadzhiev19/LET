@@ -975,6 +975,60 @@ void practiseFutureSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+void displayTheResultOfTheExercises()
+{
+	string mutualChoice;
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t  _________________________________________________________");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\tC o n g r a t u l a t i o n s !\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |_________________________________________________________|");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t  \t Congratulations Your Score Is:  \t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t  \t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	cout << "\n\t\t\t\t |\t  \t\t  " << points << " / 40 Points !\t\t   |";
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+
+	if (points >= 37 && points <= 40)
+	{
+		printf("\n\t\t\t\t |\t\t    Your Grade Is Excellent (6)\t\t   |");
+	}
+	else if (points >= 33 && points <= 36)
+	{
+		printf("\n\t\t\t\t |\t\t    Your Grade Is Very Good (5)\t\t   |");
+	}
+	else if (points >= 29 && points <= 32)
+	{
+		printf("\n\t\t\t\t |\t\t       Your Grade Is Good (4)\t\t   |");
+	}
+	else if (points >= 25 && points <= 28)
+	{
+		printf("\n\t\t\t\t |\t\t     Your Grade Is Average (3)\t\t   |");
+	}
+	else if (points >= 0 && points <= 24)
+	{
+		printf("\n\t\t\t\t |\t\t     Your Grade Is: Poor (2) !\t\t   |");
+	}
+
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |_________________________________________________________|\n\n");
+	printf("\t\t\t\t\t\t     Press Enter To Continue: ");
+
+	getline(cin, mutualChoice);
+}
+
 int main()
 {
 	displayStartPage();
