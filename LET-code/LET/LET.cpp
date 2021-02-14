@@ -544,6 +544,7 @@ void practisePresentContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays the usage of Past Simple Tense
 void displayTheUsageOfPastSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -563,6 +564,7 @@ void displayTheUsageOfPastSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Past Simple Tense
 void practisePastSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Tom ___ (look) out of the window before 5 minutes.","2. We ___ (arrive) at 6.30 yesterday.",
@@ -583,6 +585,7 @@ void practisePastSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Past Simple Tense
 void practisePastSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. Did she ___ her room?","2. We ___ good friends before.",
@@ -607,6 +610,7 @@ void practisePastSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Past Simple Tense
 void practisePastSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. I watch TV last week.","2. We eated meat with my best friend yesterday.",
@@ -627,6 +631,7 @@ void practisePastSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Past Simple Tense
 void practisePastSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Tim arrived at 2.00.","2. Sam phoned home." , "3. Helen wanted to make a phone call.","4. Paul visited the doctor.",
@@ -647,6 +652,7 @@ void practisePastSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays the usage of Past Continuous Tense
 void displayTheUsageOfPastContinuousTense(string mutualChoice)
 {
 	system("cls");
@@ -667,6 +673,7 @@ void displayTheUsageOfPastContinuousTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Past Continuous Tense
 void practisePastContinuousTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Anna ___ (read a book).", "2. Paula and Jim ___ (play football).","3. Tim ___ (write on the board).",
@@ -687,6 +694,7 @@ void practisePastContinuousTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Past Continuous Tense
 void practisePastContinuousTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: What ___ you doing 10 minutes ago?\n  B: I was studying.",
@@ -715,6 +723,7 @@ void practisePastContinuousTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Past Continuous Tense
 void practisePastContinuousTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. They are drinking coffe when I arrived.","2. I was watch football match on TV when he called.",
@@ -735,6 +744,7 @@ void practisePastContinuousTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Past Continuous Tense
 void practisePastContinuousTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Tim was drawing pictures.", "2. Kate and Bill were looking out of the window.","3. Ed and Lisa were reading a book.",
@@ -756,6 +766,7 @@ void practisePastContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays the usage of Present Perfect Tense
 void displayTheUsageOfPresentPerfectTense(string mutualChoice)
 {
 	system("cls");
@@ -778,6 +789,7 @@ void displayTheUsageOfPresentPerfectTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Present Perfect Tense
 void practisePresentPerfectTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.","3. Nick (send) ___ an email.",
@@ -799,6 +811,7 @@ void practisePresentPerfectTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Perfect Tense
 void practisePresentPerfectTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. My mother ___ been watched TV.","2. They have been ___ the Lord of the Kings.",
@@ -823,6 +836,7 @@ void practisePresentPerfectTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Present Perfect Tense
 void practisePresentPerfectTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. I has worked as an engineer for two years.","2. My brother has drived a car before.",
@@ -843,6 +857,7 @@ void practisePresentPerfectTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Present Perfect Tense
 void practisePresentPerfectTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. How long / you study English.", "2. How long / you have a cell phone.","3. How long / you have an e-mail address.",
@@ -864,6 +879,7 @@ void practisePresentPerfectTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays the usage of Future Simple Tense
 void displayTheUsageOfFutureSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -886,6 +902,7 @@ void displayTheUsageOfFutureSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
+//Practise Future Simple Tense
 void practiseFutureSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. I (choose) ___ the team next week.", "2. You (not have) ___ a lot of time to answer the questions.",
@@ -909,6 +926,7 @@ void practiseFutureSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Future Simple Tense
 void practiseFutureSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: What will you do this weekend?\n  B: A friend ___ come to visit me.",
@@ -934,6 +952,7 @@ void practiseFutureSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
+//Practise Future Simple Tense
 void practiseFutureSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. Your children was be the future of this country.","2. They are write the letter to their best friend tomorrow.",
@@ -953,6 +972,7 @@ void practiseFutureSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Practise Future Simple Tense
 void practiseFutureSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Your children will be the future of this country.","2. They will write the letter to their best friend tomorrow.",
@@ -975,6 +995,7 @@ void practiseFutureSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+//Displays a table with the score
 void displayTheResultOfTheExercises()
 {
 	string mutualChoice;
