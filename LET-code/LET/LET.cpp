@@ -864,6 +864,117 @@ void practisePresentPerfectTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
+void displayTheUsageOfFutureSimpleTense(string mutualChoice)
+{
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t\t    The Usage Of Future Simple Tense.");
+	printf("\n\n\n 1. We use the future simple with 'will' to predict the future. It is the basic way we talk about the future in English,\n    and we often use it if there is no reason to use another future tense");
+	printf("\n\n\t- The sun will rise at 7am.\n");
+	printf("\n\t- I think the Conservatives will win the next election.\n");
+	printf("\n\n 2. Promises / requests / refusals / offers.");
+	printf("\n\n\t- I'll help you with your homework.\n");
+	printf("\n\t- Will you give me a hand?\n");
+	printf("\n\t- I won't go!");
+	printf("\n\n\n 3. In a similar way, we often use 'will' when we're talking about a decision at the moment of speaking.");
+	printf("\n\n\t- I'm cold. B: I'll close the window.");
+	printf("\n\n\n 4. We use the simple future with 'will' in the first conditional.");
+	printf("\n\n\t- If it doesn't rain, we'll go to the park.");
+	printf("\t\t\t\tPress Enter To Continue: ");
+
+	getline(cin, mutualChoice);
+}
+
+void practiseFutureSimpleTenseEx1(string mutualChoice)
+{
+	string sentence[10] = { "1. I (choose) ___ the team next week.", "2. You (not have) ___ a lot of time to answer the questions.",
+		"3. Mr Jones (be) ___ back at about 7.30.","4. Dimitri (not know) ___ the answer.","5. I'm sure Jane (like) ___ her birthday present.",
+		"6. (you give) ___ us any homework on Friday?.","7. There (not be) ___ any lessons tomorrow.",
+		"8. (we see) ___ you tomorrow evening?","9. I expect lots of people (buy) ___ Alan White's new book.",
+		"10. I think our team (win) ___ the match." };
+
+	string answers[10] = { "I will choose the team next week." , "You won't have a lot of time to answer the questions." , "Mr Jones will be back at about 7.30."
+	, "Dimitri won't know the answer." , "I'm sure Jane will like her birthday present." , "Will you give us any homework on Friday?"
+	, "There won't be any lessons tomorrow." , "Will we see you tomorrow evening?" , "I expect lots of people will buy Alan White's new book."
+	, "I think our team will win the match." };
+
+	string condition[1] = { "Enter The Sentence In Future Simple Form: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.1 Enter The Sentences In The Correct Form. Use 'will' or 'won't' and the verb in brackets.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practiseFutureSimpleTenseEx2(string mutualChoice)
+{
+	string sentence[10] = { "1. A: What will you do this weekend?\n  B: A friend ___ come to visit me.",
+	"2. A: Will you go to that Italian restaurant?\n  B: No, we ___.", "3. A: Will you help me get the door?\n  B: Sure, I ___ get it.",
+	"4. A: Will you come in?\n  B: No, I ___.", "5. A: Will you go to Thailand?\n  B: No, I will ___ to Germany.",
+	"6. A: Will you make dinner?\n  B: Yes, I ___.", "7. A: What will you do after 5 minutes?\n  B: I will ___ football.",
+	"8. A: ___ start the exam?\n  B: Yes, I will.", "9. A: Where ______ go?\n  B: She will go to the bus station.",
+	"10. A: Why will he fight?\n  B: He ___ fight, because he is angry." };
+
+	string chooseAnswer[10]{ "\n\n\ta) is  b) will" , "\n\n\ta) won't  b) don't" , "\n\n\ta) going to  b) will" , "\n\n\ta) won't  b) will"
+		, "\n\n\ta) went  b) go" , "\n\n\ta) do  b) will" , "\n\n\ta) play  b) playing" , "\n\n\ta) Won't  b) Will" , "\n\n\ta) will she  b) she will"
+		, "\n\n\ta) will b) go" };
+
+	string answers[10] = { "b" , "a" , "b" , "a" , "b" , "b" , "a" , "b" , "a" , "a" };
+
+	string condition[1] = { "Enter The Correct Answer (Enter The Letter Only!): " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.2 Choose The Correct Answer.");
+
+	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
+}
+
+void practiseFutureSimpleTenseEx3(string mutualChoice)
+{
+	string sentence[10] = { "1. Your children was be the future of this country.","2. They are write the letter to their best friend tomorrow.",
+		"3. I wil read the newspaper when I go to the bus station.","4. Tommorow the sun will rising at 6.00 am.",
+		"5. They will be her in two hours.","6. Will you came to the party?", "7. When will you travell?.","8. You can't carry this luggage by yourself. I am help you.",
+		"9. I am will cook tonight.", "10. It will be very cold next week. We can go to the beach." };
+
+	string answers[10] = { "will" , "will" , "will" , "rise" , "here" , "come" , "travel" , "will" , "going to" , "will not" };
+
+	string condition[1] = { "Enter The Correct Form Of The Mistake: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.3 Correct The Mistakes (Only One Or Two Words; Don't Use Contractions!).");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
+void practiseFutureSimpleTenseEx4(string mutualChoice)
+{
+	string sentence[10] = { "1. Your children will be the future of this country.","2. They will write the letter to their best friend tomorrow.",
+		"3. I will read the newspaper when I go to the bus station.","4. Tommorow the sun will rising at 6.00 am.",
+		"5. They will be her in two hours.","6. You will come to the party.","7. You will travel.","8. You can't carry this luggage by yourself.",
+		"9. I will cook tonight.", "10. It will be very cold next week." };
+
+	string answers[10] = { "Will your children be the future of this country?" , "Will they write the letter to their best friend tomorrow?"
+	, "Will I read the newspaper when I go to the bus station?" , "Will the sun rise at 6.00 pm tommorow?" , "Will they be here in two hours?"
+	, "Will you come to the party?" , "Will you travel?" , "Can't you carry this luggage by yourself?" , "Will I cook tonight?"
+	, "Will it be very cold next week?" };
+
+	string condition[1] = { "Enter The Question Form Of The Sentence: " };
+
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\nEx.4 Change The Sentences Into Questions.");
+
+	answerCheckEx(sentence, condition, mutualChoice, answers);
+}
+
 int main()
 {
 	displayStartPage();
