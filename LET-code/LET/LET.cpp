@@ -1050,6 +1050,51 @@ void displayTheResultOfTheExercises()
 	getline(cin, mutualChoice);
 }
 
+int processMenu(string mutualChoice)
+{
+	system("cls");
+
+	printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+	printf("\n\n\t\t\t\t  _________________________________________________________");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\tC o n g r a t u l a t i o n s !\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |_________________________________________________________|");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t  \t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t  \t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\tEnter 0 To Exit The\t Enter 1 To Get Back       |");
+	printf("\n\t\t\t\t |\t     Programme\t\t     To The Main\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\tMenu\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
+	printf("\n\t\t\t\t |_________________________________________________________|\n\n");
+	printf("\t\t\t\t \t\t     Enter Your Choice: ");
+
+	getline(cin, mutualChoice);
+
+	if (mutualChoice == "0")
+	{
+		return 0;
+	}
+	else if (mutualChoice == "1")
+	{
+		startProgramme();
+	}
+}
+
+
 int main()
 {
 	displayStartPage();
