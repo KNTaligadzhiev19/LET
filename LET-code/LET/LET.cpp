@@ -205,7 +205,7 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
 	printf("\n\n\t\t\t\t  _________________________________________________________");
 
-	for (int i = 0; i < 2; i++) 
+	for (int i = 0; i < 2; i++)
 	{
 		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
 	}
@@ -221,7 +221,7 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 
 	printf("\n\t\t\t\t |\t  \t Congratulations Your Score Is:  \t   |");
 
-	for (int i = 0; i < 4; i++) 
+	for (int i = 0; i < 4; i++)
 	{
 		printf("\n\t\t\t\t |\t\t\t\t\t\t\t   |");
 	}
@@ -289,8 +289,8 @@ void answerCheckEx(string sentence[10], string condition[1], string mutualChoice
 }
 
 //Checks the user's answers 
-void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice, 
-string answers[10], string chooseAnswer[10])
+void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice,
+	string answers[10], string chooseAnswer[10])
 {
 	for (int i = 0; i < 10; i++)
 	{
@@ -450,7 +450,7 @@ void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx1(string mutualChoice)
 {
-	string sentence[10] = { 
+	string sentence[10] = {
 	"1. The boys are ___ (play) football after school.","2. They are ___ (learn) Spanish now.",
 	"3. Why aren't you ___ (do) your homework?","4. Suzan is ___ (iron) her clothes right now.",
 	"5. Mary is at university. She's ___ (study) chemistry.", "6. She is ___ (work) right now.",
@@ -473,7 +473,7 @@ void practisePresentContinuousTenseEx1(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx2(string mutualChoice)
 {
-	string sentence[10] = { 
+	string sentence[10] = {
 	"1. A: Where are you going?\n  B: I ___ going to school.","2. A: What are you doing?\n  B: I am ___ the guitar.",
 	"3. A: What are they doing?\n  B: ___ are playing football.","4. A: ___ we starting?\n  B: Yes, we are.",
 	"5. A: Why are you ___?\n  B: Because, I fell terrible.","6. A: Why ___ they skiing?\n  B: I have no idea.",
@@ -483,7 +483,7 @@ void practisePresentContinuousTenseEx2(string mutualChoice)
 
 	string answers[10] = { "a" , "a" , "b" , "a" , "a" , "b" , "a" , "b" , "a" , "b" };
 
-	string chooseAnswer[10]{ 
+	string chooseAnswer[10]{
 	"\n\n\ta) am  b) is","\n\n\ta) playing  b) play","\n\n\ta) We  b) They","\n\n\ta) Are  b) Do",
 	"\n\n\ta) crying  b) cry","\n\n\ta) we  b) are","\n\n\ta) do  b) does","\n\n\ta) do  b) am",
 	"\n\n\ta) now  b) general","\n\n\ta) doesn't b) don't" };
@@ -522,14 +522,14 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 //Practise Present Continuous Tense
 void practisePresentContinuousTenseEx4(string mutualChoice)
 {
-	string sentence[10] = { 
+	string sentence[10] = {
 	"1. They are playing football after school.", "2. They are learning Spanish now.",
 	"3. You are doing your homework now.","4. They are walking in the lawn.",
 	"5. Mary is making a cake right now.", "6. He is training at this moment.",
 	"7. It is raining.","8. He is running to the yard.","9. We are meeting in the room.",
 	"10. I am going to school." };
 
-	string answers[10] = { 
+	string answers[10] = {
 	"Are they playing football after school?","Are they learning Spanish now?","Are you doing your homework now?",
 	"Are they walking in the lawn?","Is Mary making a cake right now?","Is he training at this moment?","Is it raining?",
 	"Is he running to the yard?","Are we meeting in the room?" , "Am I going to school?" };
@@ -1167,7 +1167,7 @@ void IrregularVerbsCommandFunctions(string verb, string IrrVerbs[][3], string Ir
 	}
 }
 
-void IrregularVerbsPractise()
+void practiseIrregularVerbs()
 {
 	string IrregularVerbs[75][3] = {
 	"become",	 "became",	"become",
@@ -1263,6 +1263,121 @@ void IrregularVerbsPractise()
 	} while (verb != "Finish");
 }
 
+int processMenu(string mutualChoice);
+
+void startProgramme()
+{
+	string choice;
+	string mode;
+	string mutualChoice;
+
+	system("cls");
+
+	displayStartPage();
+
+	getline(cin, choice);
+
+	if (choice == "1")
+	{
+		displayMenu();
+
+		getline(cin, mode);
+
+		if (mode == "1")
+		{
+			displayTheUsageOfPresentSimpleTense(mutualChoice);
+			practisePresentSimpleTenseEx1(mutualChoice);
+			practisePresentSimpleTenseEx2(mutualChoice);
+			practisePresentSimpleTenseEx3(mutualChoice);
+			practisePresentSimpleTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else if (mode == "2")
+		{
+			displayTheUsageOfPresentContinuousTense(mutualChoice);
+			practisePresentContinuousTenseEx1(mutualChoice);
+			practisePresentContinuousTenseEx2(mutualChoice);
+			practisePresentContinuousTenseEx3(mutualChoice);
+			practisePresentContinuousTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else if (mode == "3")
+		{
+			displayTheUsageOfPastSimpleTense(mutualChoice);
+			practisePastSimpleTenseEx1(mutualChoice);
+			practisePastSimpleTenseEx2(mutualChoice);
+			practisePastSimpleTenseEx3(mutualChoice);
+			practisePastSimpleTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else if (mode == "4")
+		{
+			displayTheUsageOfPastContinuousTense(mutualChoice);
+			practisePastContinuousTenseEx1(mutualChoice);
+			practisePastContinuousTenseEx2(mutualChoice);
+			practisePastContinuousTenseEx3(mutualChoice);
+			practisePastContinuousTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else if (mode == "5")
+		{
+			displayTheUsageOfPresentPerfectTense(mutualChoice);
+			practisePresentPerfectTenseEx1(mutualChoice);
+			practisePresentPerfectTenseEx2(mutualChoice);
+			practisePresentPerfectTenseEx3(mutualChoice);
+			practisePresentPerfectTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else if (mode == "6")
+		{
+			displayTheUsageOfFutureSimpleTense(mutualChoice);
+			practiseFutureSimpleTenseEx1(mutualChoice);
+			practiseFutureSimpleTenseEx2(mutualChoice);
+			practiseFutureSimpleTenseEx3(mutualChoice);
+			practiseFutureSimpleTenseEx4(mutualChoice);
+
+			displayTheResultOfTheExercises();
+
+			processMenu(mutualChoice);
+		}
+		else
+		{
+			startProgramme();
+		}
+	}
+	else if (choice == "2")
+	{
+		playGuessTheWord();
+
+		displayTheResultOfGuessTheWord(mutualChoice);
+
+		processMenu(mutualChoice);
+	}
+	else if (choice == "3")
+	{
+		practiseIrregularVerbs();
+	}
+	else
+	{
+		startProgramme();
+	}
+}
+
 int processMenu(string mutualChoice)
 {
 	system("cls");
@@ -1307,9 +1422,7 @@ int processMenu(string mutualChoice)
 	}
 }
 
-
-
 int main()
 {
-	displayStartPage();
+	startProgramme();
 }
