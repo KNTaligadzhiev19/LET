@@ -1050,6 +1050,219 @@ void displayTheResultOfTheExercises()
 	getline(cin, mutualChoice);
 }
 
+void IrregularVerbsCommandTable(int command)
+{
+
+	printf("\t\t    |___________________________________________________________________________|\n");
+	printf("\t\t    |\t\t\t   Enter 'Command' for commands\t\t\t\t|\n");
+
+	if (command % 2 == 1)
+	{
+		printf("\t\t    |\t\t\t\t\t\t\t\t\t\t|\n");
+		printf("\t\t    | Enter 'Show' and select a row to see the answers\t\t\t\t|\n");
+		printf("\t\t    | Enter 'Hide' and select a row to hide the answers\t\t\t\t|\n");
+		printf("\t\t    | Enter 'ShowAll' or 'HideAll' to see or hide all answers\t\t\t|\n");
+		printf("\t\t    | Enter 'Add' or 'Del' to add or delete irregular verb\t\t\t|\n");
+		printf("\t\t    | Enter 'Finish' to finish the program\t\t\t\t\t|\n");
+	}
+
+	printf("\t\t    |___________________________________________________________________________|\n\n");
+	printf("\t\tEnter your choice: ");
+}
+
+void IrregularVerbsCommandFunctions(string verb, string IrrVerbs[][3], string IrregularVerbs[][3],
+	int number, int rows)
+{
+	if (verb == "Show")
+	{
+		printf("\t\tWhich row do you want me to show you: ");
+
+		cin >> number;
+
+		IrrVerbs[number - 1][1] = IrregularVerbs[number - 1][1];
+		IrrVerbs[number - 1][2] = IrregularVerbs[number - 1][2];
+	}
+
+	else if (verb == "Hide")
+	{
+		printf("\t\tWhich row do you want me to hide: ");
+
+		cin >> number;
+
+		IrrVerbs[number - 1][1] = "        ";
+		IrrVerbs[number - 1][2] = "        ";
+	}
+
+	else if (verb == "ShowAll")
+	{
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				IrrVerbs[i][j] = IrregularVerbs[i][j];
+			}
+		}
+	}
+
+	else if (verb == "HideAll")
+	{
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				if (j == 1 || j == 2)
+				{
+					IrrVerbs[i][j] = "       ";
+				}
+				else
+				{
+					IrrVerbs[i][j] = IrregularVerbs[i][j];
+				}
+			}
+		}
+	}
+
+	else if (verb == "Add")
+	{
+		printf("\t\tThe Verb in Infinitive: ");
+
+		cin >> IrregularVerbs[rows][0];
+
+		printf("\t\tThe Verb in Past Simple: ");
+
+		cin >> IrregularVerbs[rows][1];
+
+		printf("\t\tThe Verb in Past Participle: ");
+
+		cin >> IrregularVerbs[rows][2];
+
+		IrrVerbs[rows][0] = IrregularVerbs[rows][0];
+		IrrVerbs[rows][1] = "       ";
+		IrrVerbs[rows][2] = "       ";
+	}
+
+	else if (verb == "Del")
+	{
+		printf("\t\tWhich row do you want me to show you: ");
+
+		cin >> number;
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				if (i >= number - 1)
+				{
+					IrregularVerbs[i][j] = IrregularVerbs[i + 1][j];
+				}
+				if (j == 1 || j == 2)
+				{
+					IrrVerbs[i][j] = "       ";
+				}
+				else
+				{
+					IrrVerbs[i][j] = IrregularVerbs[i][j];
+				}
+			}
+		}
+	}
+}
+
+void IrregularVerbsPractise()
+{
+	string IrregularVerbs[75][3] = {
+	"become",	 "became",	"become",
+	"begin",	"began",	"begun",
+	"blow",		"blew",		"blown",
+	"break",	"broke",	"broken",
+	"bring",	"brought",	"brought",
+	"choose",	"chose",	"chosen",
+	"drive",	"drove",	"driven",
+	"eat",		"ate",		"eaten",
+	"find",		"found",	"found",
+	"forget",	"forgot",	"forgotten",
+	"give",		"gave",		"given",
+	"goes",		"went",		"gone",
+	"have",		"had",		"had",
+	"know",		"knew",		"known",
+	"leave",	"left",		"left",
+	"make",		"made",		"made",
+	"see",		"saw",		"seen",
+	"steal",	"stole",	"stolen",
+	"swim",		"swam",		"swum",
+	"take",		"took",		"taken",
+	"think",	"thought",	"thought",
+	"write",	"wrote",	"written", };
+	string IrrVerbs[75][3], verb;
+	int number = 0, command = 0, rows = 22;
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			if (j == 1 || j == 2)
+			{
+				IrrVerbs[i][j] = "       ";
+			}
+			else
+			{
+				IrrVerbs[i][j] = IrregularVerbs[i][j];
+			}
+		}
+	}
+
+	do {
+		system("cls");
+		printf("\t\t\t\t\t   Welcome to LET (Learn English Tenses)!");
+		printf("\n\n\t\t     ___________________________________________________________________________\n");
+		printf("\t\t    |\t\t\t\t\t\t\t\t\t\t|\n");
+		cout << "\t\t    |\t      Infinitive\t\t" << "SimplePast\t\t" << "Participle \t|\n";
+		printf("\t\t    |___________________________________________________________________________|\n");
+		printf("\t\t    |\t\t\t\t\t\t\t\t\t\t|\n");
+
+		for (int i = 0; i < rows; i++)
+		{
+			printf("\t\t    |\t");
+			for (int j = 0; j < 3; j++)
+			{
+				cout << i + 1 << "." << IrrVerbs[i][j] << "   \t\t";
+			}
+			printf("|\n");
+		}
+
+		if (verb == "Command")
+		{
+			command++;
+		}
+
+		IrregularVerbsCommandTable(command);
+
+		getline(cin, verb);
+
+		IrregularVerbsCommandFunctions(verb, IrrVerbs, IrregularVerbs, number, rows);
+
+		if (verb == "Add")
+		{
+			rows++;
+		}
+
+		if (verb == "Del")
+		{
+			rows--;
+		}
+
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				if (verb == IrregularVerbs[i][j])
+				{
+					IrrVerbs[i][j] = IrregularVerbs[i][j];
+				}
+			}
+		}
+	} while (verb != "Finish");
+}
+
 int processMenu(string mutualChoice)
 {
 	system("cls");
@@ -1093,6 +1306,7 @@ int processMenu(string mutualChoice)
 		startProgramme();
 	}
 }
+
 
 
 int main()
