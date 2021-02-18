@@ -25,10 +25,8 @@ void displayLogo()
 // Displays the modes of the application
 void displayStartPage()
 {
-
 	displayLogo();
 	printf("\n\n");
-
 
 	cout << "\n\n\n\t\t    Enter 1 To Practise English Tenses";
 
@@ -36,9 +34,7 @@ void displayStartPage()
 
 	cout << "\n\n\n\n\t\t\t\t\t      Enter 3 To Practise Irregular Verbs ";
 
-
 	cout << "\n\n\n\n\t\t\t\t\t\t     Enter Your Choice:";
-
 }
 
 // Displays the table with a random word, that user has to guess
