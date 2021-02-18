@@ -22,51 +22,23 @@ void displayLogo()
 	printf("\t\t\t\t     (_______/         (_______/             )_(\n");
 }
 
-// Displays the home page's words letter by letter
-void displayLetterByLetter(string gameMode)
-{
-	for (int i = 0; i < gameMode.size(); i++)
-	{
-		cout << gameMode[i];
-		//Slows down with 40 milliseconds
-		Sleep(40);
-	}
-}
-
 // Displays the modes of the application
 void displayStartPage()
 {
-	string gameModeOne = "Enter 1 To Practise English Tenses";
-	string gameModeTwo = "Enter 2 To Play Guess The Word";
-	string gameModeThree = "Enter 3 To Practise Irregular Verbs ";
-	string enterChoice = "Enter Your Choice: ";
 
 	displayLogo();
 	printf("\n\n");
 
-	// Draws the line under the abbreviation
-	for (int i = 0; i < 120; i++)
-	{
-		cout << "_";
-		// Slows down with 15 milliseconds the drawing of the line
-		Sleep(15);
-	}
 
-	cout << "\n\n\n\t\t    ";
+	cout << "\n\n\n\t\t    Enter 1 To Practise English Tenses";
 
-	displayLetterByLetter(gameModeOne);
+	cout << "\t\t     Enter 2 To Play Guess The Word";
 
-	cout << "\t\t     ";
+	cout << "\n\n\n\n\t\t\t\t\t      Enter 3 To Practise Irregular Verbs ";
 
-	displayLetterByLetter(gameModeTwo);
 
-	cout << "\n\n\n\n\t\t\t\t\t      ";
+	cout << "\n\n\n\n\t\t\t\t\t\t     Enter Your Choice:";
 
-	displayLetterByLetter(gameModeThree);
-
-	cout << "\n\n\n\t\t\t\t\t\t     ";
-
-	displayLetterByLetter(enterChoice);
 }
 
 // Displays the table with a random word, that user has to guess
