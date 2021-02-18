@@ -8,7 +8,7 @@ using namespace std;
 
 int points = 0;
 
-//Draws the abbreviation of the application
+// Draws the abbreviation of the application
 void displayLogo()
 {
 	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!\n\n\n");
@@ -22,6 +22,7 @@ void displayLogo()
 	printf("\t\t\t\t     (_______/         (_______/             )_(\n");
 }
 
+// Displays the home page's words letter by letter
 void displayLetterByLetter(string gameMode)
 {
 	for (int i = 0; i < gameMode.size(); i++)
@@ -32,7 +33,7 @@ void displayLetterByLetter(string gameMode)
 	}
 }
 
-//Displays the modes of the application
+// Displays the modes of the application
 void displayStartPage()
 {
 	string gameModeOne = "Enter 1 To Practise English Tenses";
@@ -43,11 +44,11 @@ void displayStartPage()
 	displayLogo();
 	printf("\n\n");
 
-	//Draws the line under the abbreviation
+	// Draws the line under the abbreviation
 	for (int i = 0; i < 120; i++)
 	{
 		cout << "_";
-		//Slows down with 15 milliseconds the drawing of the line
+		// Slows down with 15 milliseconds the drawing of the line
 		Sleep(15);
 	}
 
@@ -68,7 +69,7 @@ void displayStartPage()
 	displayLetterByLetter(enterChoice);
 }
 
-//Displays the table with a random word, that user has to guess
+// Displays the table with a random word, that user has to guess
 void displayTheTable(string mutualChoice)
 {
 	printf("\n\t\t______________________");
@@ -80,7 +81,7 @@ void displayTheTable(string mutualChoice)
 	printf("\n\n\n\n\t\tEnter The Word: ");
 }
 
-//Displays the head of the boy, when the user makes the first wrong prediction
+// Displays the head of the boy, when the user makes the first wrong prediction
 void displayTheDeadBoyHead()
 {
 	printf("\t\t\t\t\t   Welcome to LET(Learn English Tenses)!");
@@ -97,7 +98,7 @@ void displayTheDeadBoyHead()
 	printf("\n\t\t\t\t\t\t\t\t         \\_/");
 }
 
-//Displays the body of the boy, when the user makes the second wrong prediction
+// Displays the body of the boy, when the user makes the second wrong prediction
 void displayTheDeadBoyBody(string mutualChoice)
 {
 	displayTheDeadBoyHead();
@@ -110,7 +111,7 @@ void displayTheDeadBoyBody(string mutualChoice)
 	printf("\n\t\t|____________________|\t\t\t\t     /    |    \\");
 }
 
-//Displays the legs of the boy, when the user makes the third wrong prediction
+// Displays the legs of the boy, when the user makes the third wrong prediction
 void displayTheDeadBoyLegs(string mutualChoice)
 {
 	system("cls");
@@ -125,7 +126,7 @@ void displayTheDeadBoyLegs(string mutualChoice)
 	printf("\n\t\t\t\t\t\t\t\t     /         \\");
 }
 
-//Starts the "Guess The Word" game
+// Starts the "Guess The Word" game
 void playGuessTheWord()
 {
 	//Declare the variables
@@ -139,7 +140,7 @@ void playGuessTheWord()
 
 	do
 	{
-		//Gives the random function a new seed
+		// Gives the random function a new seed
 		srand(time(0));
 		unsigned int index = rand() % 29;
 		string theWord = wordList[index];
@@ -154,7 +155,6 @@ void playGuessTheWord()
 			}
 		}
 
-		//swich case
 		if (counter < 1)
 		{
 			system("cls");
@@ -197,7 +197,7 @@ void playGuessTheWord()
 	} while (choice != theWord);
 }
 
-//Displays a table with the score
+// Displays a table with the score
 void displayTheResultOfGuessTheWord(string mutualChoice)
 {
 	system("cls");
@@ -241,7 +241,7 @@ void displayTheResultOfGuessTheWord(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Displays the menu with the options
+// Displays the menu with the options
 void displayMenu()
 {
 	system("cls");
@@ -271,7 +271,7 @@ void displayMenu()
 	printf("\n\n\n\t\t\t\t\t\t\tYour Choice: ");
 }
 
-//Checks the user's answers 
+// Checks the user's answers 
 void answerCheckEx(string sentence[10], string condition[1], string mutualChoice, string answers[10])
 {
 	for (int i = 0; i < 10; i++)
@@ -288,7 +288,7 @@ void answerCheckEx(string sentence[10], string condition[1], string mutualChoice
 	}
 }
 
-//Checks the user's answers 
+// Checks the user's answers 
 void answerCheckExMultipleChoice(string sentence[10], string condition[1], string mutualChoice,
 	string answers[10], string chooseAnswer[10])
 {
@@ -307,7 +307,7 @@ void answerCheckExMultipleChoice(string sentence[10], string condition[1], strin
 	}
 }
 
-//Displays the usage of the Present Simple Tense
+// Displays the usage of the Present Simple Tense
 void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -331,7 +331,7 @@ void displayTheUsageOfPresentSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Present Simple Tense
+// Practise Present Simple Tense
 void practisePresentSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.",
@@ -352,7 +352,7 @@ void practisePresentSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Simple Tense
+// Practise Present Simple Tense
 void practisePresentSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: Where are you from?\n  B: I __ from Bulgaria.",
@@ -378,7 +378,7 @@ void practisePresentSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Present Simple Tense
+// Practise Present Simple Tense
 void practisePresentSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. He love playing basketball.","2. They sleeps in afternoon.",
@@ -398,7 +398,7 @@ void practisePresentSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Simple Tense
+// Practise Present Simple Tense
 void practisePresentSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. He loves to play basketball.", "2. He goes to school.",
@@ -423,7 +423,7 @@ void practisePresentSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays the usage of Present Continuous Tense
+// Displays the usage of Present Continuous Tense
 void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 {
 	system("cls");
@@ -447,7 +447,7 @@ void displayTheUsageOfPresentContinuousTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Present Continuous Tense
+// Practise Present Continuous Tense
 void practisePresentContinuousTenseEx1(string mutualChoice)
 {
 	string sentence[10] = {
@@ -470,7 +470,7 @@ void practisePresentContinuousTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Continuous Tense
+// Practise Present Continuous Tense
 void practisePresentContinuousTenseEx2(string mutualChoice)
 {
 	string sentence[10] = {
@@ -498,7 +498,7 @@ void practisePresentContinuousTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Present Continuous Tense
+// Practise Present Continuous Tense
 void practisePresentContinuousTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. The boys is playing football now.","2. They are learn Spanish now.",
@@ -519,7 +519,7 @@ void practisePresentContinuousTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Continuous Tense
+// Practise Present Continuous Tense
 void practisePresentContinuousTenseEx4(string mutualChoice)
 {
 	string sentence[10] = {
@@ -544,7 +544,7 @@ void practisePresentContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays the usage of Past Simple Tense
+// Displays the usage of Past Simple Tense
 void displayTheUsageOfPastSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -564,7 +564,7 @@ void displayTheUsageOfPastSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Past Simple Tense
+// Practise Past Simple Tense
 void practisePastSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Tom ___ (look) out of the window before 5 minutes.","2. We ___ (arrive) at 6.30 yesterday.",
@@ -585,7 +585,7 @@ void practisePastSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Past Simple Tense
+// Practise Past Simple Tense
 void practisePastSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. Did she ___ her room?","2. We ___ good friends before.",
@@ -610,7 +610,7 @@ void practisePastSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Past Simple Tense
+// Practise Past Simple Tense
 void practisePastSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. I watch TV last week.","2. We eated meat with my best friend yesterday.",
@@ -631,7 +631,7 @@ void practisePastSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Past Simple Tense
+// Practise Past Simple Tense
 void practisePastSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Tim arrived at 2.00.","2. Sam phoned home." , "3. Helen wanted to make a phone call.","4. Paul visited the doctor.",
@@ -652,7 +652,7 @@ void practisePastSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays the usage of Past Continuous Tense
+// Displays the usage of Past Continuous Tense
 void displayTheUsageOfPastContinuousTense(string mutualChoice)
 {
 	system("cls");
@@ -673,7 +673,7 @@ void displayTheUsageOfPastContinuousTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Past Continuous Tense
+// Practise Past Continuous Tense
 void practisePastContinuousTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Anna ___ (read a book).", "2. Paula and Jim ___ (play football).","3. Tim ___ (write on the board).",
@@ -694,7 +694,7 @@ void practisePastContinuousTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Past Continuous Tense
+// Practise Past Continuous Tense
 void practisePastContinuousTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: What ___ you doing 10 minutes ago?\n  B: I was studying.",
@@ -723,7 +723,7 @@ void practisePastContinuousTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Past Continuous Tense
+// Practise Past Continuous Tense
 void practisePastContinuousTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. They are drinking coffe when I arrived.","2. I was watch football match on TV when he called.",
@@ -744,7 +744,7 @@ void practisePastContinuousTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Past Continuous Tense
+// Practise Past Continuous Tense
 void practisePastContinuousTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Tim was drawing pictures.", "2. Kate and Bill were looking out of the window.","3. Ed and Lisa were reading a book.",
@@ -766,7 +766,7 @@ void practisePastContinuousTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays the usage of Present Perfect Tense
+// Displays the usage of Present Perfect Tense
 void displayTheUsageOfPresentPerfectTense(string mutualChoice)
 {
 	system("cls");
@@ -789,7 +789,7 @@ void displayTheUsageOfPresentPerfectTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Present Perfect Tense
+// Practise Present Perfect Tense
 void practisePresentPerfectTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. Harry (do) ___ the housework.", "2. Kate and Bill (find) ___ a new flat.","3. Nick (send) ___ an email.",
@@ -811,7 +811,7 @@ void practisePresentPerfectTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Perfect Tense
+// Practise Present Perfect Tense
 void practisePresentPerfectTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. My mother ___ been watched TV.","2. They have been ___ the Lord of the Kings.",
@@ -836,7 +836,7 @@ void practisePresentPerfectTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Present Perfect Tense
+// Practise Present Perfect Tense
 void practisePresentPerfectTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. I has worked as an engineer for two years.","2. My brother has drived a car before.",
@@ -857,7 +857,7 @@ void practisePresentPerfectTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Present Perfect Tense
+// Practise Present Perfect Tense
 void practisePresentPerfectTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. How long / you study English.", "2. How long / you have a cell phone.","3. How long / you have an e-mail address.",
@@ -879,7 +879,7 @@ void practisePresentPerfectTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays the usage of Future Simple Tense
+// Displays the usage of Future Simple Tense
 void displayTheUsageOfFutureSimpleTense(string mutualChoice)
 {
 	system("cls");
@@ -902,7 +902,7 @@ void displayTheUsageOfFutureSimpleTense(string mutualChoice)
 	getline(cin, mutualChoice);
 }
 
-//Practise Future Simple Tense
+// Practise Future Simple Tense
 void practiseFutureSimpleTenseEx1(string mutualChoice)
 {
 	string sentence[10] = { "1. I (choose) ___ the team next week.", "2. You (not have) ___ a lot of time to answer the questions.",
@@ -926,7 +926,7 @@ void practiseFutureSimpleTenseEx1(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Future Simple Tense
+// Practise Future Simple Tense
 void practiseFutureSimpleTenseEx2(string mutualChoice)
 {
 	string sentence[10] = { "1. A: What will you do this weekend?\n  B: A friend ___ come to visit me.",
@@ -952,7 +952,7 @@ void practiseFutureSimpleTenseEx2(string mutualChoice)
 	answerCheckExMultipleChoice(sentence, condition, mutualChoice, answers, chooseAnswer);
 }
 
-//Practise Future Simple Tense
+// Practise Future Simple Tense
 void practiseFutureSimpleTenseEx3(string mutualChoice)
 {
 	string sentence[10] = { "1. Your children was be the future of this country.","2. They are write the letter to their best friend tomorrow.",
@@ -972,7 +972,7 @@ void practiseFutureSimpleTenseEx3(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Practise Future Simple Tense
+// Practise Future Simple Tense
 void practiseFutureSimpleTenseEx4(string mutualChoice)
 {
 	string sentence[10] = { "1. Your children will be the future of this country.","2. They will write the letter to their best friend tomorrow.",
@@ -995,7 +995,7 @@ void practiseFutureSimpleTenseEx4(string mutualChoice)
 	answerCheckEx(sentence, condition, mutualChoice, answers);
 }
 
-//Displays a table with the score
+// Displays a table with the score
 void displayTheResultOfTheExercises()
 {
 	string mutualChoice;
@@ -1050,6 +1050,7 @@ void displayTheResultOfTheExercises()
 	getline(cin, mutualChoice);
 }
 
+// Displays a table with commands
 void IrregularVerbsCommandTable(int command)
 {
 
@@ -1070,12 +1071,13 @@ void IrregularVerbsCommandTable(int command)
 	printf("\t\tEnter your choice: ");
 }
 
+// Holds commands
 void IrregularVerbsCommandFunctions(string verb, string IrrVerbs[][3], string IrregularVerbs[][3],
 	int number, int rows)
 {
 	if (verb == "Show")
 	{
-		printf("\t\tWhich row do you want me to show you: ");
+		printf("\t\tWhich row do you want me to show: ");
 
 		cin >> number;
 
@@ -1143,7 +1145,7 @@ void IrregularVerbsCommandFunctions(string verb, string IrrVerbs[][3], string Ir
 
 	else if (verb == "Del")
 	{
-		printf("\t\tWhich row do you want me to show you: ");
+		printf("\t\tWhich row do you want me to delete: ");
 
 		cin >> number;
 		for (int i = 0; i < rows; i++)
@@ -1167,6 +1169,7 @@ void IrregularVerbsCommandFunctions(string verb, string IrrVerbs[][3], string Ir
 	}
 }
 
+// Practise irregular verbs
 void practiseIrregularVerbs()
 {
 	string IrregularVerbs[75][3] = {
@@ -1263,8 +1266,10 @@ void practiseIrregularVerbs()
 	} while (verb != "Finish");
 }
 
+// Defines processMenu function
 int processMenu(string mutualChoice);
 
+// Runs the programme
 void startProgramme()
 {
 	string choice;
@@ -1378,6 +1383,7 @@ void startProgramme()
 	}
 }
 
+// Uses for get back on the home page 
 int processMenu(string mutualChoice)
 {
 	system("cls");
@@ -1424,5 +1430,6 @@ int processMenu(string mutualChoice)
 
 int main()
 {
+	// Runs the programme
 	startProgramme();
 }
