@@ -11,6 +11,7 @@
 + [Game Modes](#modes)
 + [Technologies](#technologies)
 + [Installation](#installation)
++ [Function List](#function-list)
 
 
 ## 🧐 About	<a name = "about"></a>
@@ -64,7 +65,7 @@ Paste this in cmd:
 git clone https://github.com/KNTaligadzhiev19/LET.git	
 ````	
 
-## Function list
+## Function list <a name = "function-list"></a>
 
 | Name  | Action  | Line |
 | :------------ |:---------------:| -----:|
