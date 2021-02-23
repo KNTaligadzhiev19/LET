@@ -38,7 +38,7 @@
 
 > 5. **VNStoyanov19** - **Developer Frontend**	
    - ***Email***: [***VNStoyanov19@codingburgas.bg***](mailto:VNStoyanov19@codingburgas.bg)	
-   - ***GitHub profile***: [***VNStoyanov19***](https://github.com/VNStoyanov19
+   - ***GitHub profile***: [***VNStoyanov19***](https://github.com/VNStoyanov19)
 
 
 ## 💭 Game Modes <a name = "modes"></a>
