@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void answerCheckEx(string sentence[10], string mutualChoice, string answers[10]);
+int answerCheckEx(string sentence[10], string mutualChoice, string answers[10]);
 
-void answerCheckExMultipleChoice(string sentence[10], string mutualChoice,
+int answerCheckExMultipleChoice(string sentence[10], string mutualChoice,
 	string answers[10], string chooseAnswer[10]);

@@ -13,11 +13,34 @@ namespace LETUnitTesting
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(MySumShouldReturnCorrectAnswerWithFourAndThree)
 		{
+			// AAA
+
+			// Arrange
 			int num = 4;
 			int num1 = 3;
-			Assert::AreEqual(7, fun(num, num1));
+
+			// Act
+			int actual = mySum(num, num1);
+
+			// Assert
+			Assert::AreEqual(7, actual);
+		}
+
+		TEST_METHOD(MySumShouldReturnNegativeValueIfOneOftheArgumentsIsNegativeNumber)
+		{
+			// AAA
+
+			// Arrange
+			int num = 4;
+			int num1 = -8;
+
+			// Act
+			int actual = mySum(num, num1);
+
+			// Assert
+			Assert::AreEqual(-4, actual);
 		}
 	};
 }

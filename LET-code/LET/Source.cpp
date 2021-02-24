@@ -8,6 +8,32 @@ using namespace std;
 
 int points = 0;
 
+string irregularVerbs[75][3] = {
+"become",	 "became",	"become",
+"begin",	"began",	"begun",
+"blow",		"blew",		"blown",
+"break",	"broke",	"broken",
+"bring",	"brought",	"brought",
+"choose",	"chose",	"chosen",
+"drive",	"drove",	"driven",
+"eat",		"ate",		"eaten",
+"find",		"found",	"found",
+"forget",	"forgot",	"forgotten",
+"give",		"gave",		"given",
+"goes",		"went",		"gone",
+"have",		"had",		"had",
+"know",		"knew",		"known",
+"leave",	"left",		"left",
+"make",		"made",		"made",
+"see",		"saw",		"seen",
+"steal",	"stole",	"stolen",
+"swim",		"swam",		"swum",
+"take",		"took",		"taken",
+"think",	"thought",	"thought",
+"write",	"wrote",	"written", };
+
+string irrVerbs[75][3], verb;
+
 // Draws the abbreviation of the application
 void displayLogo()
 {
@@ -1102,30 +1128,7 @@ void irregularVerbsCommandFunctions(string verb, string irrVerbs[][3], string ir
 // Practise irregular verbs
 void practiseIrregularVerbs()
 {
-	string irregularVerbs[75][3] = {
-	"become",	 "became",	"become",
-	"begin",	"began",	"begun",
-	"blow",		"blew",		"blown",
-	"break",	"broke",	"broken",
-	"bring",	"brought",	"brought",
-	"choose",	"chose",	"chosen",
-	"drive",	"drove",	"driven",
-	"eat",		"ate",		"eaten",
-	"find",		"found",	"found",
-	"forget",	"forgot",	"forgotten",
-	"give",		"gave",		"given",
-	"goes",		"went",		"gone",
-	"have",		"had",		"had",
-	"know",		"knew",		"known",
-	"leave",	"left",		"left",
-	"make",		"made",		"made",
-	"see",		"saw",		"seen",
-	"steal",	"stole",	"stolen",
-	"swim",		"swam",		"swum",
-	"take",		"took",		"taken",
-	"think",	"thought",	"thought",
-	"write",	"wrote",	"written", };
-	string irrVerbs[75][3], verb;
+
 	int number = 0, command = 0, rows = 22;
 
 	for (int i = 0; i < rows; i++)
@@ -1358,7 +1361,7 @@ int processMenu(string mutualChoice)
 	}
 }
 
-int fun(int num, int num1)
+int mySum(int num, int num1)
 {
 	return num + num1;
 }

@@ -38,4 +38,4 @@ void startProgramme();
 
 int processMenu(string mutualChoice);
 
-int fun(int num, int num1);
+int mySum(int num, int num1);
