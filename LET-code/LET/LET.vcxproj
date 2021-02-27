@@ -140,14 +140,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="DisplayFunction.cpp" />
     <ClCompile Include="LET.cpp" />
-    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnswerCheck.h" />
-    <ClInclude Include="Exercises.h" />
-    <ClInclude Include="DisplayFunctions.h" />
-    <ClInclude Include="UsageOfEnglishTenses.h" />
+    <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="DisplayFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,20 +27,5 @@ namespace LETUnitTesting
 			// Assert
 			Assert::AreEqual(7, actual);
 		}
-
-		TEST_METHOD(MySumShouldReturnNegativeValueIfOneOftheArgumentsIsNegativeNumber)
-		{
-			// AAA
-
-			// Arrange
-			int num = 4;
-			int num1 = -8;
-
-			// Act
-			int actual = mySum(num, num1);
-
-			// Assert
-			Assert::AreEqual(-4, actual);
-		}
 	};
 }

@@ -3,10 +3,8 @@
 #include <ctime>
 #include <Windows.h>
 #include <stdlib.h>
-#include "../LET/AnswerCheck.h"
-#include "../LET/DisplayFunctions.h"
-#include "../LET/Exercises.h"
-#include "../LET/UsageOfEnglishTenses.h"
+#include "DisplayFunction.h"
+#include "Algorithm.h"
 
 using namespace std;
 
